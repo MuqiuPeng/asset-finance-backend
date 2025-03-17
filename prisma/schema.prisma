@@ -17,7 +17,7 @@ model User {
   id            String       @id @default(auto()) @map("_id") @db.ObjectId
   email         String       @unique
   password      String
-  activate     Boolean       @default(false)
+  activate      Boolean      @default(false)
   applications  Application[]
   personalInfos PersonalInfo[]
   createdAt     DateTime     @default(now())
@@ -45,7 +45,7 @@ model PersonalInfo {
   id        String   @id @default(auto()) @map("_id") @db.ObjectId
   userId    String   @db.ObjectId
   fname     String
-  mname     String
+  mname     String   @default("")
   lname     String
   address   String
   phone     String

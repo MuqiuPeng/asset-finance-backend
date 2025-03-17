@@ -113,7 +113,8 @@
     "paths": {
       "@routes/*": ["routes/*"],
       "@controllers/*": ["controllers/*"],
-      "@services/*": ["services/*"]
+      "@services/*": ["services/*"],
+      "@schemas/*": ["schemas/*"]
     }
   }
 }

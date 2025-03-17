@@ -8,3 +8,6 @@ export const personalInfoSchema = z.object({
     phone: z.string().min(1, 'Phone number must not be empty'),
     dob: z.date()
 })
+
+
+export type PersonalInfoSchema = z.infer<typeof personalInfoSchema>
