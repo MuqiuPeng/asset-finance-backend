@@ -1,5 +1,5 @@
 import { PrismaClient } from "@prisma/client";
-import { ApplicationSchema } from "@schemas/application";
+import { ApplicationSchema } from "@/schemas/application";
 
 const prisma = new PrismaClient();
 
@@ -11,15 +11,15 @@ export const createApplication = async (userId: string, personalInfoId: string, 
             personalInfoId
         }
     })
-}
+};
 
 export const getApplications = async () => {
     return await prisma.application.findMany();
-}
+};
 
 export const getApplicationById = async (id: string) => {
     return await prisma.application.findUnique({ where: {id} })
-}
+};
 
 export const updateApplication = async (id: string, data: ApplicationSchema) => {
     return await prisma.application.update({
